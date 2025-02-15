@@ -12,7 +12,6 @@ import Tesla from "./img/Tesla.png";
 export const menu = [
   { link: "/", label: "home" },
   { link: "/car-listing", label: "model" },
-  { link: "/contact", label: "contact" },
 ];
 
 export const hereContent = [
