@@ -6,7 +6,6 @@ import NotFound from "./pages/NotFound";
 import BookingConfirmation from "./pages/BookingConfirmation";
 import CarDetail from "./pages//CarDetail";
 import CarListing from "./pages/CarListing";
-import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -22,7 +21,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );
