@@ -1,59 +1,66 @@
 import { useState } from "react";
-import { FaSearch, FaBell, FaUserCircle, FaCartPlus } from "react-icons/fa";
+import { FaSearch, FaTimes } from "react-icons/fa";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import MenuSidebar from "./MenuSidebar";
+import { menu } from "../assets/asset";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <div className="bg-white p-3 px-6 flex justify-between items-center fixed w-full z-50 shadow-sm">
-      {/* Left Section */}
-      <div className="flex gap-6 text-black items-center">
-        <button
-          className="p-2 rounded-full hover:bg-gray-100"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <HiMenuAlt3 className="text-xl cursor-pointer" />
-        </button>
-        <Link to="/" className="text-xl font-semibold text-[#FF0000]">
-          RentDrive
-        </Link>
-      </div>
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-      {/* SideBar */}
+  return (
+    <div className="flex justify-between items-center p-4 lg:px-[5em] shadow-xl lg:border-b lg:shadow-none bg-[#f9f9f9] fixed w-full left-0 top-0">
+      <Link to={`/`} className="flex uppercase text-xl gap-2 font-semibold">
+        <span className="text-black">rent</span>
+        <span className="text-[#93AA9C] md:flex hidden">drive</span>
+      </Link>
+
+      {/* Desktop Menu */}
+      <div className="lg:flex hidden gap-6">
+        {menu.map((m, i) => (
+          <Link
+            key={i}
+            to={m.link}
+            className="capitalize text-lg hover:text-[#93AA9C] transition-colors duration-300"
+          >
+            {m.label}
+          </Link>
+        ))}
+      </div>
       {menuOpen && (
-        <div className="fixed hidden">
-          <MenuSidebar />
+        <div className="lg:hidden absolute top-16 left-0 w-full bg-white shadow-lg z-50">
+          <div className="flex flex-col gap-4 p-4">
+            {menu.map((m, i) => (
+              <Link
+                key={i}
+                to={m.link}
+                className="capitalize text-lg hover:text-[#93AA9C] transition-colors duration-300"
+                onClick={toggleMenu}
+              >
+                {m.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
-
-      {/* Middle Section */}
-      <div className="flex items-center w-1/2 max-w-2xl">
-        <div className="flex bg-[#F6F6F6] items-center px-4 rounded-full w-full border border-gray-300 focus-within:border-blue-500">
-          <input
-            type="text"
-            className="outline-none bg-transparent p-2 w-full placeholder-gray-500"
-            placeholder="Search cars by name, price, etc."
-          />
-          <button className="p-2 rounded-r-full bg-gray-100 hover:bg-gray-200">
-            <FaSearch className="text-gray-600" />
-          </button>
+      <div className="flex items-center gap-4">
+        <div className="border p-3 rounded-full cursor-pointer hover:bg-[#93AA9C] hover:text-gray-200 transition-colors duration-300">
+          <FaSearch className="text-[#93AA9C] hover:text-gray-200" />
         </div>
+        <button className="px-6 py-3 bg-black text-white rounded-full hover:bg-[#93AA9C] transition-colors duration-300">
+          SignUp
+        </button>
       </div>
-
-      {/* Right Section */}
-      <div className="flex gap-4 items-center">
-        <button className="p-2 rounded-full hover:bg-gray-100">
-          <FaBell className="text-xl text-gray-600" />
-        </button>
-        <button className="p-2 rounded-full hover:bg-gray-100">
-          <FaCartPlus className="text-xl text-gray-600" />
-        </button>
-        <button className="p-2 rounded-full hover:bg-gray-100">
-          <FaUserCircle className="text-xl text-gray-600" />
-        </button>
+      <div className="lg:hidden flex items-center gap-4">
+        <div
+          className="border p-3 rounded-full cursor-pointer hover:bg-[#93AA9C] hover:text-gray-200 transition-colors duration-300"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? <FaTimes /> : <HiMenuAlt3 />}
+        </div>
       </div>
     </div>
   );

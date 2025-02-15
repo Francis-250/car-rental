@@ -8,26 +8,37 @@ import Pagani from "./img/Pagani.png";
 import Porsche from "./img/Porsche.png";
 import Rolls from "./img/Rolls.png";
 import Tesla from "./img/Tesla.png";
-import High from "./img/high.png";
-import Low from "./img/low.png";
 
 export const menu = [
   { link: "/", label: "home" },
   { link: "/car-listing", label: "model" },
   { link: "/contact", label: "contact" },
-  { link: "/gallery", label: "gallery" },
 ];
 
 export const hereContent = [
   {
-    title: "The Premier for Car Rentals",
+    title: "Rent Car In Worldwide",
     subTitle: "Find the perfect car for your journey with ease.",
-    img: High,
-  },
-  {
-    title: "Low Cost Car Rentals Made Quick and Simple",
-    subTitle: "Affordable and hassle-free car rentals at your fingertips.",
-    img: Low,
+    id: 1,
+    name: "Ferrari SF90 Stradale",
+    year: 2024,
+    price: "$524,000",
+    horsePower: 1000,
+    topSpeed: "211 mph",
+    acceleration: "0-60 mph in 2.5 sec",
+    description:
+      "A hybrid V8 supercar with stunning design and cutting-edge performance, blending Ferrari’s signature speed with electric power.",
+    image: Ferrari,
+    manufacturer: "Ferrari",
+    fuelType: "Hybrid",
+    seatingCapacity: 2,
+    engineType: "V8",
+    safetyRating: "5 stars",
+    features: [
+      "Adaptive Cruise Control",
+      "Navigation System",
+      "Driver Assistance",
+    ],
   },
 ];
 
@@ -76,7 +87,7 @@ export const cars = [
     id: 3,
     name: "Bugatti Chiron Super Sport",
     year: 2024,
-    price: "$3.9 million",
+    price: "$3.9 M",
     horsePower: 1578,
     topSpeed: "273 mph",
     acceleration: "0-60 mph in 2.4 sec",
@@ -84,7 +95,7 @@ export const cars = [
       "A hypercar masterpiece with a quad-turbo W16 engine, delivering unmatched speed and luxury.",
     image: Bugatti,
     manufacturer: "Bugatti",
-    fuelType: "Gasoline",
+    fuelType: "Gas",
     seatingCapacity: 2,
     engineType: "W16",
     safetyRating: "5 stars",
@@ -98,7 +109,7 @@ export const cars = [
     id: 4,
     name: "McLaren P1",
     year: 2024,
-    price: "$1.3 million",
+    price: "$1.3 M",
     horsePower: 903,
     topSpeed: "217 mph",
     acceleration: "0-60 mph in 2.6 sec",
@@ -128,7 +139,7 @@ export const cars = [
       "An iconic sports car with blistering speed, everyday usability, and timeless design.",
     image: Porsche,
     manufacturer: "Porsche",
-    fuelType: "Gasoline",
+    fuelType: "Gas",
     seatingCapacity: 2,
     engineType: "Flat-6",
     safetyRating: "5 stars",
@@ -142,7 +153,7 @@ export const cars = [
     id: 6,
     name: "Koenigsegg Jesko",
     year: 2024,
-    price: "$3 million",
+    price: "$3 M",
     horsePower: 1600,
     topSpeed: "300+ mph",
     acceleration: "0-60 mph in 2.5 sec",
@@ -150,7 +161,7 @@ export const cars = [
       "A record-breaking hypercar built for extreme speed and aerodynamic efficiency.",
     image: Koenigsegg,
     manufacturer: "Koenigsegg",
-    fuelType: "Gasoline",
+    fuelType: "Gas",
     seatingCapacity: 2,
     engineType: "V8",
     safetyRating: "5 stars",
@@ -164,7 +175,7 @@ export const cars = [
     id: 7,
     name: "Aston Martin Valkyrie",
     year: 2024,
-    price: "$3.2 million",
+    price: "$3.2 M",
     horsePower: 1160,
     topSpeed: "250 mph",
     acceleration: "0-60 mph in 2.5 sec",
@@ -172,7 +183,7 @@ export const cars = [
       "A Formula 1-inspired hypercar with a naturally aspirated V12 and lightweight design.",
     image: Aston,
     manufacturer: "Aston Martin",
-    fuelType: "Gasoline",
+    fuelType: "Gas",
     seatingCapacity: 2,
     engineType: "V12",
     safetyRating: "5 stars",
@@ -186,7 +197,7 @@ export const cars = [
     id: 8,
     name: "Pagani Huayra R",
     year: 2024,
-    price: "$3.5 million",
+    price: "$3.5 M",
     horsePower: 850,
     topSpeed: "238 mph",
     acceleration: "0-60 mph in 2.7 sec",
@@ -194,7 +205,7 @@ export const cars = [
       "A handcrafted Italian hypercar with artistic design and a roaring V12 engine.",
     image: Pagani,
     manufacturer: "Pagani",
-    fuelType: "Gasoline",
+    fuelType: "Gas",
     seatingCapacity: 2,
     engineType: "V12",
     safetyRating: "5 stars",
