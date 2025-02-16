@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaSearch, FaTimes } from "react-icons/fa";
+import { FaArrowRight, FaTimes } from "react-icons/fa";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { menu } from "../assets/asset";
@@ -47,12 +47,13 @@ const Header = () => {
         </div>
       )}
       <div className="flex items-center gap-4">
-        <div className="border p-3 rounded-full cursor-pointer hover:bg-[#93AA9C] hover:text-gray-200 transition-colors duration-300">
-          <FaSearch className="text-[#93AA9C] hover:text-gray-200" />
-        </div>
-        <button className="px-6 py-3 bg-black text-white rounded-full hover:bg-[#93AA9C] transition-colors duration-300">
-          SignUp
-        </button>
+        <Link
+          to={`/car-listing`}
+          className="px-6 py-3 flex items-center gap-2 bg-black text-white rounded-full hover:bg-[#93AA9C] transition-colors duration-300"
+        >
+          <span className="text-lg">Explore Cars</span>
+          <FaArrowRight className="text-xl" />
+        </Link>
       </div>
       <div className="lg:hidden flex items-center gap-4">
         <div

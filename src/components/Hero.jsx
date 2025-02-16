@@ -1,9 +1,5 @@
 import { hereContent } from "../assets/asset";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaChevronCircleRight,
-} from "react-icons/fa";
+import { FaArrowRight, FaChevronCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -44,7 +40,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Explore Button */}
+            {/*  Button */}
             <div className="mt-4 flex gap-10 items-center">
               <Link
                 to={`/car/${hero.id}`}
@@ -53,14 +49,21 @@ const Hero = () => {
                 <FaChevronCircleRight className="text-xl" />
                 <span className="text-lg">Rent Now</span>
               </Link>
-              <div className="flex gap-10">
+              <Link
+                to={`/car-listing`}
+                className="px-6 py-3 flex items-center gap-2 bg-black text-white rounded-full hover:bg-[#93AA9C] transition-colors duration-300"
+              >
+                <span className="text-lg">Explore More</span>
+                <FaArrowRight className="text-xl" />
+              </Link>
+              {/* <div className="flex gap-10">
                 <div className="border p-3 rounded-full cursor-pointer">
                   <FaArrowRight />
                 </div>
                 <div className="border p-3 rounded-full cursor-pointer">
                   <FaArrowLeft />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

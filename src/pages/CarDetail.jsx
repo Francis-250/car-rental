@@ -13,7 +13,7 @@ const CarDetail = () => {
   return (
     <div className="px-3 md:px-6 lg:px-12 pt-[8em]">
       <div className="flex lg:flex-row flex-col justify-between items-center gap-8 lg:gap-12">
-        {/* Left Section: Text Content */}
+        {/* Left */}
         <div className="flex flex-col gap-6 max-w-2xl">
           <header className="text-4xl lg:text-5xl font-bold text-gray-900">
             {car.name}
@@ -51,7 +51,7 @@ const CarDetail = () => {
             </div>
           </div>
 
-          {/* Explore Button */}
+          {/*  Button */}
           <div className="mt-4 flex gap-10 items-center">
             <Link
               to={`/booking/${car.id}`}
@@ -63,7 +63,7 @@ const CarDetail = () => {
           </div>
         </div>
 
-        {/* Right Section: Image */}
+        {/* Right */}
         <div className="w-full lg:w-auto flex justify-center">
           <img
             src={car.image}
